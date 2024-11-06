@@ -35,7 +35,7 @@ jobs:
 
     # Build the Docker image
     - name: Build the Docker image
-      run: docker build . --tag $DOCKER_IMAGE_NAME:latest
+      run: docker build . --file Dockerfile-Dev --tag $DOCKER_IMAGE_NAME:latest
 
     # Tag the Docker Images
     - name: Tag the image for the private registry $DOCKER_REGISTRY_URL
